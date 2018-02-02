@@ -329,6 +329,7 @@ header ul li a:hover {
 }
 
 .writing .circle {
+	z-index: -1;
 	bottom: -300px;
 	right: 125px;
 	border: 150px solid rgba(205,92,92,0.3);
@@ -494,13 +495,13 @@ header ul li a:hover {
 	padding: 30px 0px;
 	background-color: #FFE4E1;
 	position: relative;
-	z-index: -2;
+	z-index: 1;
 	overflow: hidden;
 }
 
 .webDev .circle {
 	border: 150px solid rgba(205,92,92,0.2);
-	z-index: -1;
+	z-index: -5;
 }
 
 .webDev .circle1 {
@@ -515,6 +516,7 @@ header ul li a:hover {
 
 .writing .wrapper {
 	text-align: center;
+	width: 80%;
 }
 
 .writing img {
@@ -522,27 +524,32 @@ header ul li a:hover {
 	color: #333;
 }
 
+/*.writing .writingCarousel {
+	width: 100%;
+}*/
+
 .writing .writingCarousel {
 	width: 100%;
-}
+	display: flex;
+/*	margin: 0 10%;
+*/}
 
-.writing .writingCarousel .writing-cell {
-	width: 80%;
-	margin: 0 10%;
-}
-
-.writing .writingCarousel .writing-cell div {
+.writing .writingCarousel div {
 	float: left;
 	width: 50%;
 	text-align: right;
 }
 
-.writing .writingCarousel .writing-cell div.cellImage {
+.writing .writingCarousel div p {
+	text-align: left;
+}
+
+.writing .writingCarousel div.cellImage {
 	width: 50%;
 	float: left;
 }
 
-.writing .writingCarousel .writing-cell div.cellImage img {
+.writing .writingCarousel div.cellImage img {
 	width: 90%;
 	margin: 0 5%;
 	border: 2px solid white;
@@ -550,116 +557,65 @@ header ul li a:hover {
 	box-shadow: 10px 10px 5px 0px rgba(50,50,50,0.5);
 }
 
-.writing .writingCarousel .criticism-cell div {
-	text-align: left;
-	padding-left: 5px;
+button.journalism-button {
+	width: 50px;
+	float: left;
+	margin-top: 100px;
 }
 
-.writing .writingCarousel .criticism-cell div h2 {
-	margin-left: 50px;
+button.journalism-button i {
+	font-size: 45px;
+	color: red;
+	margin-left: -14px;
 }
 
-.writing .writing-cell h2 {
+.writing h2 {
 	display: inline-block;
 }
 
-.writing .wrapper .journalism-cell {
-	position: relative;
-	overflow: visible;
+.writing .writingCarousel div.cellContent {
+	padding-top: 50px;
 }
 
-.writing .wrapper .journalism-cell .hr {
-	position: absolute;
-	top: 35%;
-	width: 100%;
-	z-index: -1;
-}
-
-.writing .wrapper .journalism-cell .hr .square {
-	width: 10px;
-	height: 10px;
-	margin-top: 3px;
-	border: 3px solid rgba(205,92,92,0.8);
-	float: left;
-}
-
-.writing .wrapper .journalism-cell .hr hr {
-	border-top: 1px solid rgba(205,92,92,0.8);
-	border-bottom: none;
-}
-
-.writing .wrapper .criticism-cell .hr {
-	position: absolute;
-	top: 35%;
-	width: 100%;
-	z-index: -1;
-}
-
-.writing .wrapper .criticism-cell .hr hr {
-	border-top: 1px solid rgba(205,92,92,0.8);
-	border-bottom: none;
-}
-
-.writing .wrapper .features-cell .hr {
-	position: absolute;
-	top: 35%;
-	width: 100%;
-	z-index: -1;
-	right: 0;
-}
-
-.writing .wrapper .features-cell .hr hr {
-	border-top: 1px solid rgba(205,92,92,0.8);
-	border-bottom: none;
-	width: 98.8%;
-	float: left;
-}
-
-.writing .wrapper .features-cell .hr .square {
-	width: 10px;
-	height: 10px;
-	margin-top: 3px;
-	border: 3px solid rgba(205,92,92,0.8);
-	float: left;
-}
-
-.writing button {
+.writing button.writePort {
 	margin-top: 60px;
 }
 
 @media (max-width: 940px) {
 	
-	.writing .writingCarousel .writing-cell {
+	.writing .writingCarousel {
 		width: 100%;
 	}
 
-	.writing .writingCarousel .writing-cell div.cellImage img {
+	.writing .writingCarousel div.cellImage img {
 		margin-top: 50px;
 	}
 }
 
+@media (max-width: 768px) {
+
+	.writing .wrapper {
+		width: 90%;
+		min-width: 0;
+	}
+
+}
+
 @media (max-width: 600px) {
 
-	.writing .writingCarousel .writing-cell div.cellContent {
+	.writing .writingCarousel div.cellContent {
 		width: 100%;
 		text-align: center;
 	}
 
-	.writing .writingCarousel .writing-cell div.cellImage {
+	.writing .writingCarousel div.cellImage {
 		display: none;
 	}
 
-	.writing .writingCarousel .criticism-cell div {
-		padding-left: 0;
+	.writing .writingCarousel div.cellContent {
+	padding-top: 0;
 	}
 
-	.writing .writingCarousel .criticism-cell div h2 {
-		margin-left: 0;
-	}
-
-	.writing .hr {
-		display: none;
-	}
 }
 
 /* WRITING PORTFOLIO ===
@@ -1015,9 +971,9 @@ header ul li a:hover {
 	z-index: 0;
 }
 
-.contact .circle2 {
+.contact .circle3 {
 	top: -300px;
-	left: -325px;
+	left: 125px;
 }
 
 .contact .wrapper {
